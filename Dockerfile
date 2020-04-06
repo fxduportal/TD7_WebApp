@@ -1,7 +1,8 @@
 FROM gitpod/workspace-full
 
 USER root
-
+RUN apt-get install htop -y
+RUN apt-get install zsh -y 
 RUN npm i
 RUN npm i -g nodemon
 RUN npm install forever -g
@@ -12,5 +13,3 @@ RUN apt-get update && apt-get install -y \
 RUN chmod -R 777 ~/.config
 RUN chmod -R 777 ~/.npm
 
-RUN apt-get install htop -y
-RUN apt-get install zsh -y 
